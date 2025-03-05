@@ -38,6 +38,25 @@
     <p>Captions</p>
     <hr width="100%" size="2" noshade>
 
+    <h2>Scatterplot: Preoperative ALT vs. Surgery Duration</h2>
+    
+    <label for="preops">Select Preoperative Variable:</label>
+    <select id="preops">
+        <option value="preop_alt">Preoperative ALT</option>
+        <option value="preop_alb">Preoperative ALB</option>
+        <option value="preop_pt">Preoperative PT</option>
+        <option value="surgery_duration">Surgery Duration</option>
+    </select>
+    
+    <svg width="800" height="500"></svg>
+
+    <!-- Place script tag here to ensure DOM is ready -->
+    <script src="visualization.js"></script>
+
+    <dl id="commit-tooltip" class="info tooltip">
+      <!-- Add: Time, author, lines edited -->
+    </dl>
+
     <h2>Prototype: Final Interactive</h2>
 
     <div class="sliders">
