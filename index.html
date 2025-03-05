@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="global.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project: A Dive into Surgery Statistics</title>
+</head>
+<body>
+    <h1>A Dive into Surgery Statistics: What Determines ICU Stays?</h1>
+    <h2>Background</h2>
+    <p>Our project aims to visualize how different preoperative conditions (hypertension, diabetes, abnormal ECG, etc.) correlate with surgery outcomes. We want to utilize plots such as bar charts and correlation matrices, and we want our visualizations to be fully interactable with specific filters of the various risk factors, allowing users to dynamically observe changes in the distribution of patient outcomes. For this reason, we were also thinking about utilizing a violin plot as it’s an effective method of showcasing the distribution and density of mortality across different levels of each preoperative condition. Violin plots can also highlight the density levels by having heatmap-esque sections with respect to each filtered risk factor. The ultimate goal that we have in mind is that this approach tackles how impactful preoperative conditions are on surgery outcomes and how these events can be better predicted in the future. Specifically, we intend on trying to understand what risks are present in surgeries that can often result in high mortality rates, and proposing potential solutions that can address these concerns, using data to guide our approach.</p>
+    <hr width="100%" size="2" noshade>
+
+    <h2>Visualization 1</h2>
+    <p>Some Background Info</p>
+    <img src="visualizations/v1.png" alt="First Visualization" width="957" height="373">
+    <p>Captions</p>
+    <hr width="100%" size="2" noshade>
+    
+    <h2>Visualization 2</h2>
+    <p>Some Background Info</p>
+    <img src="visualizations/v2.png" alt="First Visualization" width="957" height="459">
+    <p>Captions</p>
+    <hr width="100%" size="2" noshade>
+    
+    <h2>Visualization 3</h2>
+    <p>Some Background Info</p>
+    <img src="visualizations/v3.png" alt="First Visualization" width="957" height="491">
+    <p>Captions</p>
+    <hr width="100%" size="2" noshade>
+    
+    <h2>Visualization 4</h2>
+    <p>Some Background Info</p>
+    <img src="visualizations/v4.png" alt="First Visualization" width="957" height="320">
+    <p>Captions</p>
+    <hr width="100%" size="2" noshade>
+
+    <h2>Prototype: Final Interactive</h2>
+
+    <div class="sliders">
+      <label>Preoperative Glucose (mg/dL): <span id="glucoseVal">100</span></label>
+      <input type="range" id="glucose" min="50" max="300" value="100" step="1">
+
+      <label>Preoperative Albumin (g/dL): <span id="albuminVal">4.0</span></label>
+      <input type="range" id="albumin" min="2.0" max="5.0" value="4.0" step="0.1">
+
+      <label>Preoperative ALT (IU/L): <span id="altVal">30</span></label>
+      <input type="range" id="alt" min="10" max="100" value="30" step="1">
+    </div>
+
+    <div class="output">
+      <strong>Predicted ICU Stay:</strong> <span id="icuPred">3</span> days
+    </div>
+
+    <div class="chart-container">
+      <div id="fin"></div>
+    </div>
+      
+</body>
+</html>
